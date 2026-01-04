@@ -1,6 +1,8 @@
 # 🚗 Vehicle Rental System – Query Explanations & Solutions
 This section explains all SQL queries included in the `queries.sql` file.
 
+---
+
 ### Query 1: Retrieve Booking Information (JOIN)
 
 **Requirement:** Retrieve booking details along with the customer name and vehicle name.
@@ -22,6 +24,7 @@ INNER JOIN vehicles USING(vehicle_id);
 
 **Explanation:** This query joins the `bookings`, `users`, and `vehicles` tables using foreign keys to display complete booking information including customer and vehicle details.
 
+---
 
 ### Query 2: Find Vehicles That Have Never Been Booked (EXISTS)
 
@@ -48,7 +51,7 @@ WHERE NOT EXISTS (
 
 **Explanation:** The `NOT EXISTS` clause checks for vehicles that have no matching records in the `bookings` table, ensuring only never-booked vehicles are returned.
 
-
+---
 
 
 
@@ -75,7 +78,7 @@ AND vehicle_type = 'car';
 **Explanation:** This query filters vehicles based on availability status and vehicle type using the `WHERE` clause.
 
 
-
+---
 
 
 
